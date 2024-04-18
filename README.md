@@ -1,1 +1,3 @@
-# portofolio2
+#PORTOFOLIO
+
+Ini adalah portofolio kedua saya!
