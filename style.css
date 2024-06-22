@@ -1,0 +1,414 @@
+:root {
+    --01: #bfc5d9;
+    --02: #163e8c;
+    --03: #215ba6;
+    --04: #194073;
+    --05: #4d5d73;
+    --06: #222222;
+    --07: #555555;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+
+}
+
+body {
+    background-color: #222222;
+    color: white;
+    font-family: "kanit", serif;
+}
+
+main {
+    display: flex;
+}
+
+a,
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+/* *Sidebar */
+.scrollup {
+    padding: 1vh 1.5vh 1vh 1.5vh;
+    position: fixed;
+    bottom: 8vh;
+    right: 8vh;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: var(--01);
+    opacity: 0%;
+    transition: 0.3s;
+    z-index: 1;
+    text-align: center;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 8vh;
+    transition: ease-in-out 0.5s;
+}
+
+div#sidebar {
+    width: 0%;
+    height: 100%;
+    background-color: var(--06);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    overflow-x: hidden;
+    transition: ease-in-out 0.3s;
+}
+
+div#sidebar p {
+    margin: 0vh 0vh 0vh 2vh;
+    border-radius: 1px;
+    height: 8vh;
+    font-size: 2em;
+    font-weight: bold;
+    align-content: center;
+    text-align: center;
+}
+
+div#sidebar div.side {
+    border-top: solid black;
+    margin: 0vh 2vh 0vh 2vh;
+}
+
+div#sidebar div.side a.list_nav {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    padding: 1vh;
+    transition: ease-in-out 0.3s;
+}
+
+/* *End Sidebar */
+
+/* *Navbar */
+
+nav {
+    position: relative;
+    width: 100%;
+    height: 8vh;
+    background-color: var(--06);
+    display: flex;
+    align-items: center;
+    border-bottom: solid white;
+    border-radius: 2px solid;
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+}
+
+#menu,
+#close {
+    display: flex;
+    width: 25px;
+    padding: 1vh;
+    margin: 1vh;
+    cursor: pointer;
+}
+
+#close {
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+p.logo {
+    margin: 0vh auto 0vh 2vh;
+    font-size: 2em;
+    font-weight: bold;
+    transition: 0.5s ease-in-out;
+}
+
+nav div.links {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0vh 0vh 0vh 0vh;
+    transition: 0.5s ease-in-out;
+}
+
+nav div.links .list_nav {
+    transition: .3s;
+    padding: 8px;
+    margin: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.logoStyle {
+    width: 7vh;
+    margin: 5px;
+}
+
+#blink {
+    color: white;
+    animation: blink 0.5s step-end infinite alternate;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* *End Navbar */
+
+
+/* *Aside */
+aside#sticky-profile {
+    position: fixed;
+    top: 150px;
+    left: 50px;
+    background-color: #555555;
+    width: 250px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    cursor: default;
+}
+
+aside#sticky-profile div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+aside#sticky-profile div h3 {
+    margin: 0vh 0vh .5vh 0vh;
+}
+
+aside#sticky-profile div img {
+    margin: 0vh 0vw 1vh 0vw;
+    width: 200px;
+    filter: drop-shadow(.5vh 0vh .2vh white);
+}
+
+aside#sticky-profile div div {
+    border-top: 2px solid black;
+}
+
+aside#sticky-profile div div a {
+    display: flex;
+    align-items: center;
+    margin: 0.25vh;
+    color: white;
+}
+
+aside#sticky-profile div div a:hover {
+    color: cyan;
+}
+
+aside#sticky-profile div div a p {
+    margin: 0vh 0vh 0vh 1vh;
+
+}
+
+aside#sticky-profile div h3 {
+    text-align: center;
+}
+
+aside#sticky-profile div ul {
+    display: flex;
+    justify-content: center;
+}
+
+aside#sticky-profile div ul li {
+
+    margin: 1vh 2vh 1vh 2vh;
+}
+
+aside#sticky-profile div ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+aside#sticky-profile div ul li a:hover {
+    color: cyan;
+    transform: scale(1.2);
+}
+
+aside#about {
+    padding: 0vh 1vh 1vh 1vh;
+}
+
+/* *End Aside */
+
+div.banner {
+    width: 100%;
+    height: 8vh;
+}
+
+div#container {
+    width: 100%;
+    display: flex;
+}
+
+/* *Section */
+
+div#side {
+    width: 400px;
+}
+
+main {
+    margin: 0vh auto 0vh auto;
+}
+
+section {
+    background-color: #555555;
+    width: 100vh;
+    height: 65.7vh;
+    margin: 6vh 0vh 6vh 0vh;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+section ul {
+    display: flex;
+    justify-content: end;
+    gap: 1vh;
+    margin: 2vh 1vh 2vh 1vh;
+    padding: 0vh 0vh 2vh 0vh;
+    border-bottom: solid 2px black;
+}
+
+section ul li a.link_list {
+    padding: 1vh;
+    border-right: solid 2px #22222200;
+    border-left: solid 2px #22222200;
+    cursor: pointer;
+    transition: .5s;
+}
+
+section ul li a:hover {
+    border-right: solid 2px #222222;
+    border-left: solid 2px #222222;
+}
+
+/* !Show Section for Function */
+#show_section #my_project {
+    text-align: center;
+}
+
+#show_section #fake_project {
+    text-align: center;
+}
+
+#show_section #lecture {
+    text-align: center;
+}
+
+#show_section #tools {
+    text-align: center;
+}
+
+/* !Show Section for Function */
+
+/* *End Section */
+
+/* *Footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #202020;
+    width: 100%;
+    height: 10vh;
+    position: relative;
+    bottom: 0;
+    z-index: 0;
+}
+
+footer div {
+    transition: .3s;
+}
+
+footer div ul.foot_links {
+    display: flex;
+    justify-content: center;
+    gap: 1vh;
+    margin: 1vh;
+}
+
+footer div ul.foot_links li {
+    list-style-type: none;
+}
+
+footer div ul.foot_links li a,
+footer div p {
+    text-align: center;
+    align-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: small;
+}
+
+footer div ul.foot_links li a:hover {
+    color: cyan;
+}
+
+/* *End Footer */
+
+@media screen and (min-width: 758px) and (max-width: 1024px) {
+    p.logo {
+        margin: 0vh auto 0vh 8vh;
+    }
+
+    nav div.links {
+        margin: 0vh 8vh 0vh 0vh;
+    }
+
+    nav div.links {
+        display: flex;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    footer div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10vh;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    p.logo {
+        margin: 0vh auto 0vh 16vh;
+    }
+
+    nav div.links {
+        margin: 0vh 16vh 0vh 0vh;
+    }
+
+    nav div.links {
+        display: flex;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    footer div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20vh
+    }
+}
