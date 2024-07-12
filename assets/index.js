@@ -1,8 +1,20 @@
+const menu = document.getElementById('menu');
+const close = document.getElementById('close');
+const sidebar = document.getElementById('sidebar');
 const listNav = document.querySelectorAll('.list_nav');
 const linkList = document.querySelectorAll('.link_list');
 const nav = document.getElementById('nav');
 const banner = document.getElementById('banner');
 const showSection = document.getElementById('show_section');
+
+// * Menu
+function showSide() {
+    sidebar.style.width = "100%"
+}
+
+function hideSide() {
+    sidebar.style.width = "0%"
+}
 
 // Sticky Navigation When Scroll
 let sticky = 1;
@@ -64,23 +76,23 @@ function Project() {
     showSection.innerHTML = thisProject
 }
 function FakeProject() {
-    const thisProject = 
+    const thisFakeProject = 
         (`<div id="fake_project">
         <h1>Fake Project</h1>
         </div>`)
-    showSection.innerHTML = thisProject
+    showSection.innerHTML = thisFakeProject
 }
-function Lecture() {
-    const thisProject = 
-        (`<div id="lecture">
-        <h1>My Lecture</h1>
+function Assignments() {
+    const thisAssignments = 
+        (`<div id="assignments">
+        <h1>My Assignments</h1>
         </div>`)
-    showSection.innerHTML = thisProject
+    showSection.innerHTML = thisAssignments
 }
 function Tools() {
-    const thisProject = 
+    const thisTools = 
         (`<div id="tools">
         <h1>Tools</h1>
         </div>`)
-    showSection.innerHTML = thisProject
+    showSection.innerHTML = thisTools
 }

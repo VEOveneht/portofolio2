@@ -77,14 +77,14 @@ div#sidebar p {
 }
 
 div#sidebar div.side {
-    border-top: solid black;
+    border-top: solid white;
     margin: 0vh 2vh 0vh 2vh;
 }
 
 div#sidebar div.side a.list_nav {
     display: flex;
     flex-direction: column;
-    color: black;
+    color: white;
     padding: 1vh;
     transition: ease-in-out 0.3s;
 }
@@ -136,7 +136,7 @@ nav div.links {
     transition: 0.5s ease-in-out;
 }
 
-nav div.links .list_nav {
+nav div.links a.list_nav {
     transition: .3s;
     padding: 8px;
     margin: 5px;
@@ -144,7 +144,7 @@ nav div.links .list_nav {
     color: white;
 }
 
-.logoStyle {
+p.logoStyle {
     width: 7vh;
     margin: 5px;
 }
@@ -162,14 +162,25 @@ nav div.links .list_nav {
 
 /* *End Navbar */
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5vh 0vh 5vh 0vh;
+    gap: 20px;
+}
+
+div#profile-wrap {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+}
 
 /* *Aside */
+
 aside#sticky-profile {
-    position: fixed;
-    top: 150px;
-    left: 50px;
     background-color: #555555;
-    width: 250px;
+    width: 300px;
     padding: 25px;
     display: flex;
     flex-direction: column;
@@ -191,6 +202,10 @@ aside#sticky-profile div h3 {
 aside#sticky-profile div img {
     margin: 0vh 0vw 1vh 0vw;
     width: 200px;
+    transition: .5s;
+}
+
+aside#sticky-profile div img:hover {
     filter: drop-shadow(.5vh 0vh .2vh white);
 }
 
@@ -251,53 +266,32 @@ div.banner {
     height: 8vh;
 }
 
-div#container {
-    width: 100%;
-    display: flex;
-}
-
 /* *Section */
 
-div#side {
-    width: 400px;
-}
-
-main {
-    margin: 0vh auto 0vh auto;
-}
-
-section {
+div#aboutme {
     background-color: #555555;
-    width: 100vh;
-    height: 65.7vh;
-    margin: 6vh 0vh 6vh 0vh;
+    width: 90%;
+    height: 100%;
     padding: 20px;
-    border-radius: 25px;
 }
 
-section ul {
+div#aboutme ul {
     display: flex;
     justify-content: end;
     gap: 1vh;
-    margin: 2vh 1vh 2vh 1vh;
+    margin: 1vh 0vh 1vh 0vh;
     padding: 0vh 0vh 2vh 0vh;
     border-bottom: solid 2px black;
 }
 
-section ul li a.link_list {
+div#aboutme ul li a.link_list {
     padding: 1vh;
-    border-right: solid 2px #22222200;
-    border-left: solid 2px #22222200;
     cursor: pointer;
     transition: .5s;
+    font-size: small;
 }
 
-section ul li a:hover {
-    border-right: solid 2px #222222;
-    border-left: solid 2px #222222;
-}
-
-/* !Show Section for Function */
+/* !Show div#aboutme for Function */
 #show_section #my_project {
     text-align: center;
 }
@@ -306,7 +300,7 @@ section ul li a:hover {
     text-align: center;
 }
 
-#show_section #lecture {
+#show_section #assignments {
     text-align: center;
 }
 
@@ -363,6 +357,106 @@ footer div ul.foot_links li a:hover {
 
 /* *End Footer */
 
+/* * Blog */
+
+div.main-wrapper {
+    padding: 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #555555;
+    gap: 3vh;
+}
+
+div.main-wrapper div ul li {
+    list-style: inside;
+}
+
+div.main-wrapper div table,
+td {
+    text-align: center;
+    margin: 1vh auto 0vh auto;
+    padding: 3px;
+    border: solid 1px black;
+}
+
+div.blog-card {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    margin: 0vh 0vh 3vh 0vh;
+    border-radius: 10px;
+}
+
+div.blog-card a {
+    font-size: 1.5rem;
+    color: black;
+    transition: .3s;
+}
+
+div.blog-card div {
+    margin: 1.5vh 0vh 0vh 0vh;
+    gap: 1rem;
+}
+
+div.blog-card div p {
+    color: rgb(77, 77, 77);
+}
+
+div.blog-card div a {
+    min-width: 300px;
+    max-width: 300px;
+    align-content: center;
+}
+
+
+div.blog-card div a img {
+    width: 100%;
+    transition: .5s;
+}
+
+div.blog-card div a img:hover {
+    transform: scale(1.01);
+    opacity: 85%;
+}
+
+div.blog-card a:hover {
+    color: #3179d8;
+}
+
+div.support-card {
+    background-color: white;
+    padding: 20px;
+    margin: 0vh 0vh 2vh 0vh;
+    border-radius: 10px;
+    text-align: center;
+}
+
+div.support-card p {
+    margin: 0px 0px 5px 0px;
+    border-bottom: solid 2px black;
+}
+
+@media screen and (min-width: 650px) and (max-width: 1024px) {
+    div.blog-card {
+        text-align: unset;
+    }
+
+    div.blog-card a {
+        font-size: 1.8rem;
+        color: black;
+    }
+
+    div.blog-card div {
+        display: flex;
+    }
+}
+
+/* * End of Blog */
+
+/* ? Tablet */
+
 @media screen and (min-width: 758px) and (max-width: 1024px) {
     p.logo {
         margin: 0vh auto 0vh 8vh;
@@ -380,6 +474,34 @@ footer div ul.foot_links li a:hover {
         display: none;
     }
 
+    main {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        margin: 5vh 2vh 5vh 2vh;
+    }
+
+    aside#sticky-profile {
+        position: fixed;
+        top: 180px;
+        left: 10px;
+        background-color: #555555;
+        width: 250px;
+        padding: 25px;
+        border-radius: 25px;
+        cursor: default;
+    }
+
+    div#aboutme {
+        background-color: #555555;
+        height: 100vh;
+        border-radius: 25px;
+    }
+
+    div#aboutme ul li a.link_list {
+        font-size: 16px;
+    }
+
     footer div {
         display: flex;
         justify-content: center;
@@ -387,6 +509,22 @@ footer div ul.foot_links li a:hover {
         gap: 10vh;
     }
 }
+
+/* ? End of Tablet */
+
+@media screen and (min-width: 768px) {
+    div.main-wrapper {
+        flex-direction: row;
+        align-items: normal;
+        gap: 3vh;
+    }
+
+    div.blog-card {
+        text-align: unset;
+    }
+}
+
+/* ? PC */
 
 @media screen and (min-width: 1025px) {
     p.logo {
@@ -405,10 +543,70 @@ footer div ul.foot_links li a:hover {
         display: none;
     }
 
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 5vh;
+        gap: 20px;
+    }
+
+    aside#sticky-profile {
+        position: fixed;
+        top: 132px;
+        left: 50 px;
+        background-color: #555555;
+        width: 250px;
+        padding: 25px;
+        border-radius: 25px;
+        cursor: default;
+    }
+
+    div#aboutme {
+        align-items: end;
+        background-color: #555555;
+
+        height: 100vh;
+        margin: 0vh auto 0vh auto;
+        padding: 20px;
+        border-radius: 25px;
+    }
+
+    div#aboutme ul li a.link_list {
+        font-size: 16px;
+    }
+
     footer div {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 20vh
     }
+
+    div.main-wrapper {
+        width: 94vh;
+        flex-direction: row;
+        align-items: normal;
+        gap: 3vh;
+    }
+
+    /* *Blog */
+    div.blog-card {
+        text-align: unset;
+    }
+
+    div.blog-card a {
+        font-size: 1.8rem;
+        color: black;
+    }
+
+    div.blog-card div {
+        display: flex;
+    }
+
+    div.blog-card div img {
+        width: 35vh;
+    }
 }
+
+/* ? End of PC */
